@@ -1,0 +1,12 @@
+int a = 2;
+int b = 4;
+int c = 3;
+int d = 7;
+int e = 1;
+eval a + ( b + c ) * d - e;
+string f = "abc";
+eval f + ( b + c ) * d - e;
+double g = 0.14;
+eval a + ( b + c ) * g - e;
+string h = "abcd";
+eval f * h;
