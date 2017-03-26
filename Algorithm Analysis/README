@@ -1,0 +1,13 @@
+Task 1 
+ 1.Pentru fiecare simbol din stringul initial, din tape.in (in afara de # de dinainte de primul simbol relevant), parcurg tranzitiile si verific daca se incadreaza in vreuna.
+ 2. Daca da, execut operatiile corespunzatoare. 
+ 3. Daca nu, continui pana la final. Daca nu gasesc o anumita stare in nicio tranzitie si nici nu face parte din starile finale, masina "se agata". 
+ 4. Daca stringul este gol, il scriu in fisier asa cum este.
+
+
+Task 2
+ 1. Citesc un caracter si pun 'C' in locul lui.
+ 2. Daca citesc 0 si 1 sau 1 si 0 scriu 'B' in al doilea string, pe pozitia corespunzatoare.
+ 3. Daca citesc 1 si 1 scriu 0 si incrementez ce este in continuare.
+ 4. La final sterg 'C'-urile si ajung in starea finala.
+
