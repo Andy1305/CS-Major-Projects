@@ -1,0 +1,8 @@
+1. Citesc cele doua numere, deimpartitul si impartitorul (baza).
+2. Daca baza nu este in intervalul [2, 16], afisez mesajul de eroare si ies.
+3. Impart numarul la baza pana cand devine 0. Pun restul pe stiva. Retin si de cate ori l-am impartit, in ECX.
+4. Daca numarul e 0, trec la afisare.
+5. Scot de pe stiva si afisez pana se goleste.
+6. Cifrele sunt convertite in caractere, cu ajutorul tabelei ASCII.
+7. Daca restul e mai mare ca 10 (baza e mai mare ca 10), convertesc caracterul in litera corespunzatoare tabelului ASCII.
+8. Cand stiva s-a golit, ies din program.
