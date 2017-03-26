@@ -1,0 +1,12 @@
+Settings 1 2 3
+Add NodA Alex
+Add NodB Marian Alex
+Add NodC Ionela Marian Alex 
+Add NodB Vasea Marian Alex 
+Add NodA Petea Alex
+Add NodC Ion Marian
+Add NodC Cristi Marian
+Serialize Alex Alex_Fisier.txt
+Settings 1 2 3
+Deserialize Alex_Fisier.txt
+Serialize Alex Alex_Fisier2.txt
