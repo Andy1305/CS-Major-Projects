@@ -1,0 +1,28 @@
+1. Task 0: - Am retinut IP-ul intr-un vector.
+ 	   - L-am parcurs si am afisat pana la "/".
+
+2. Task 1: - Am retinut masca intr-un vector si am convertit-o in numar cu functia atoi().
+	   - Am convertit-o in binar cu functia mask_to_decimal() ce scrie intr-un vector 1 de int_mask ori si apeleaza binary_to_decimal.
+	   - binary_to_decimal transforma un octet (numar in binar) in zecimal.
+           - Cele doua functii returneaza un vector de numere intregi, ce contine masca in zecimal, pe care am afisat-o.
+
+3. Task 2: - Am folosit functia adresa_de_retea() care ia fiecare octet si face AND pe biti cu masca.
+	   - Functia returneaza un vector cu adresa de retea.
+
+4. Task 3: - Am folosit functia adresa_de_broadcast() care ia fiecare octet si face OR pe biti cu complementul mastii.
+           - Functia afiseaza adresa de broadcast.
+
+5. Task 4: - Am folosit functia adresa_de_retea pentru IP2 si fiecare din celelalte IP-uri.
+           - Am comparat fiecare intreg (octet) returnat de functie si am afisat raspunsul corespunzator.
+
+6. Task 5: - Am utilizat functiie convert_to_hexa si convert_to_octal ce se folosesc de optiunile functiei printf() pentru a afisa fiecare octet in baza respectiva.
+
+7. Task 6: - In cazul in care raspunsul la task-ul 4 este afirmativ, afisez 0.
+           - Altfel, folosesc functia adresa_de_retea si compar fiecare intreg (octet).
+	   - Daca adresele de retea sun egale, afisez indicele IP-ului.
+
+8. Task 7: - Functia ip_to_binary() ia fiecare octet al IP-ului si il trimite ca parametru functiei number_to_binary().
+       	   - Aceasta transforma un numar in binar.
+
+9. Task 8: - Functia ip_to_32() ia fiecare octet al IP-ului si il trimite ca parametru functiei number_to_32(). 
+	   - Aceasta transforma un numar in baza 32, incrementand caracterul "A", daca restul este mai mare sau egal ca 10.
