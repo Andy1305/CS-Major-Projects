@@ -1,0 +1,50 @@
+Protocoalele folosite sunt TCP si UDP.
+
+Formatele comenzilor sunt exact ca in enunt.
+
+
+I. Client:
+ - Se declara variabilele si se initializeaza.
+ - Se creeaza socketii: TCP pentru ATM si UDP pentru UNLOCK si se fac conexiunile, daca este nevoie.
+ - Se initializeaza multimea de citire, cu cei doi socketi si 0.
+ - Se afla PID-ul procesului si se creeaza fisierul .log.
+ - Se afla descriptorul maxim.
+ - In while:
+	    - Se reinitializeaza multime descriptorilor.
+	    - Se foloseste select pentru a bloca si selecta socketii care au input sau sunt gata sa fie scrisi.
+	    - In for:
+		     - Se reseteaza vectorii mereu.
+		     - Daca descriptorul 0 e disponibil, se citeste de la tastatura comanda si se trimite pe ATM sau UNLOCK,
+		       exact cum este specificat in enunt.
+		     - Daca se citeste "quit", se inchid socketii si procesul.
+		     - Se respecta erorile corespunzatoare.
+		     - flag_LOGIN se activeaza daca clientul este autentificat.
+		     - flag_UNLOCK se activeaza daca se primeste de la server textul "Trimite parola secreta"
+		     - Daca descriptorul e sockfd_ATM sau sockfd_UNLOCK, se citeste rezultatul comenzii si se scrie in fisier.
+
+
+II. Server:
+ - Structura Entry contine campurile specifice fiecare persoane din fisierul
+dat ca input.
+ - Campul sockfd retine descriptorul fiecarui client.
+ - Campul tries reprezinta incercarile de logare.
+ - Se declara variabilele si se initializeaza.
+ - flag e 0 daca cardul nu exista.
+ - flag_LOGGED_IN se activeaza daca o persoana este deja logata.
+ - Stringurile aux_card_nr, aux_pin, listsold, sum si pass se folosesc pentru parsarea comenzii.
+ - Se creeaza socketii: TCP pentru ATM si UDP pentru UNLOCK
+ - Se initializeaza multimea de citire, cu cei doi socketi si 0.
+ - Se citesc datele din fisierul de intrare.
+ - Se realizeaza conexiunile TCP si UDP.
+ - In while:
+	    - Se reinitializeaza multime descriptorilor.
+            - Se foloseste select pentru a bloca si selecta socketii care au input sau sunt gata sa fie scrisi.
+	    - In for:
+		     - Se reseteaza stringurile.
+		     - Daca se primeste "quit" de la tastatura, se inchid toate legaturile cu clientii si serverul.
+		     - Daca sockfd_ATM e disponibil, se creeaza conexiune noua.
+		     - Daca sockfd_UNLOCK e disponibil, se primesc datele, si se executa deblocarea contului.
+		     - Daca ceilalti socketi (acceptati folosind accept()) sunt disponibili, se primesc comenzile si se executa, exact cum
+		       este specificat in enunt.
+		     - Se transmite rezultatul catre clienti.
+
