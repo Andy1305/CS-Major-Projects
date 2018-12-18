@@ -1,0 +1,15 @@
+14 6 6
+intrq 3 29 {
+intrq 3 73 }
+intrq 3 19 {
+intrq 3 84 }
+intrq 3 46 }
+extrq 3
+extrq 3
+sortq 3
+intrq 3 89 ]
+intrq 3 31 {
+intrq 3 8 }
+correctq 3
+printq
+printq
