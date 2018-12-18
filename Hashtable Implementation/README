@@ -1,3 +1,5 @@
+Hashtable Implementation in C for Windows/Linux
+
 In fisierul list.c:
 	- create_cell() aloca memorie pentru o celula a listei si adauga informatia in ea.
 	- insert_cell() insereaza un cuvant intr-o lista. Creeaza o celula noua.
