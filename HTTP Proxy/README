@@ -1,0 +1,13 @@
+- Structura Client retine, pentru fiecare socket (client), cererea pe care o face.
+- In while:
+	- Daca primesc ceva pe sockfd, inseamna ca se conecteaza un client nou si creez conexiunea.
+	- Daca primesc ceva pe serv_sock, inseamna ca serverul imi trimite date.
+	- Caut clientul de la care am primit cererea.
+	- Primesc date de la server, le trimit la browser si le scriu in fisier (cache), daca este permis.
+	- Dupa ce termin, inchid conexiunea.
+	- Altfel, inseamna ca primesc o cerere de la client.
+	- Extrag numele site-ului din cerere.
+	- Daca cererea a mai fost facuta si fisierul e in cache, nu mai trimit cerere la server.
+	- Verific daca linkul contine port si il extrag, daca exista. Daca nu, folosesc portul 80.
+	- Daca cererea e noua, o trimit la server si astept date pe serv_sock.
+	- Altfel, daca cererea nu este buna, afisez eroare, corespunzator RFC. 
