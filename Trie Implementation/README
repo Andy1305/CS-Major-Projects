@@ -1,0 +1,23 @@
+I. Fisierul list.h contine structura trie-ului, care este de fapt o lista simplu inlantuita, ce contine campurile end, care marcheaza sfarsitul unui cuvant,
+   info, ce retine caracterul si trei legaturi: catre parinte, celula urmatoare si copii.
+
+   
+II. Fisierul list.c contine definitiile pentru functiile specifice listei: 
+	- create_cell() ce creeaza o celula.
+        - insert() ce introduce o celula in lista.
+        - delete() ce sterge o celula din lista.
+
+
+III. Fisierul trie.c contine definitiile pentru functiile specifice arborelui:
+	- add_word() parcurge trie-ul, iar daca simbolul nu exista deja, il adauga.
+	- remove_word() parcurge trie-ul pana la ultimul simbol din cuvant, iar apoi elimina cate un nod, pana la radacina, daca acel cuvant este singur pe 	      calea respectiva.
+	- find() parcurge trie-ul pana cand ajunge la finalul cuvantului, ceea ce inseamna ca acel cuvant a fost gasit.
+	- find_longest_prefix() parcurge trie-ul pana la sfarsitul prefixului, daca acesta exista.
+	- find_all() parcurge recursiv trie-ul si adauga in res toate cuvintele care incep cu un anumit prefix.
+	- find_all_with_prefix() gaseste calea pe care se afla toate cuvintele care incep cu un anumit prefix. Apoi apeleaza find_all(), care gaseste toate 		  cuvintele. Daca nu primeste niciun prefix, se afiseaza toate cuvintele.
+	- mean_length() apeleaza find_all_with_prefix() si face media tuturor cuvintelor gasite.
+	
+	
+IV. Fisierul tema3.c contine:
+	- get_string() ce returneaza parametrul operatiei, daca exista.
+	- main(), in care se citeste din fisier si se scriu in fisier rezultatele functiilor. 
