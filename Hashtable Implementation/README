@@ -1,0 +1,36 @@
+In fisierul list.c:
+	- create_cell() aloca memorie pentru o celula a listei si adauga informatia in ea.
+	- insert_cell() insereaza un cuvant intr-o lista. Creeaza o celula noua.
+          Daca lista este vida, capatul listei va fi noua celula.
+          Altfel, noua celula este adaugata la sfarsitul liste.
+        - remove_cell() Elimina o celula din lista, cautand-o in fiecare lista.
+	  Daca celula de eliminat este prima si singura lista va deveni nula.
+	  Altfel, se va elimina doar celula.
+	  In ambele cazuri, memoria este eliberata.
+	- delete_list() parcurge o lista si elimina fiecare element, eliberand memoria.
+	  La final, lista va fi nula.
+	- print_list() afiseaza informatiile dintr-o lista.
+	- find_info() cauta un cuvant intr-o lista. Daca-l gaseste, returneaza "True", alfel "False".
+	
+
+In fisierul ht.c:
+	- create_ht() aloca si initializeaza un obiect de tip Hashtable.
+	- add_word() Adauga un cuvant in hash table.
+	  Foloseste functia hash pentru a gasi indexul listei si functia insert_cell() pentru a-l introduce.
+	  Daca cuvantul exista deja, acesta nu mai e reintrodus.
+	- remove_word() sterge din hash table intrarea cu informatia word.
+	- find_word() cauta un cuvant in hash table, returnand "True" daca il gaseste, "False" altfel.
+	- clear() parcurge fiecare lista din hash table si sterge fiecare intrare,
+	  folosind functia delete_list().
+	- print_bucket() afiseaza informatia din fiecare celula din lista cu un anumit index.
+	- print() parcurge bucketurile hash tabelului si printeza cuvintele din ele,
+	  folosind functia print_bucket().
+	- resize() Dubleaza (mode 1) sau injumatateste (mode 2) hash tabelul.
+	  Creeaza un nou hash table, cu noua dimensiune, parcurge listele celui vechi si adauga fiecare element in cel nou.
+	  Totodata, elibereaza si memoria celui vechi. Metoda returneaza noul hash table.
+	  
+
+In fisierul tema1.c:
+	- execute_command() executa o comanda primita ca parametru. Totodata o parseaza, impartind-o pe componente.
+	  In functie de comanda, apeleza functia specifica. Deschide si inchide fisiere, unde este cazul.
+	- In main() se citesc comenzile din fisiere si se elibereaza hsah_tabelul si restul memoriei, in final.
