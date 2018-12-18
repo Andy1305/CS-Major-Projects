@@ -1,0 +1,52 @@
+Distributed Image Processing
+
+
+Fiecare nod isi afla vecinii, citindu-i din fisier.
+
+Daca nodul este initiator: - Citesc si parsez datele din fisiere.
+			   - Trimit numarul de operatii.
+			   - Trimit numarul de linii.
+			   - Trimit numarul de coloane.
+			   - Trimit granita de sus.
+			   - Trimit granita de jos.
+			   - Trimit pixelii.
+			   - Primesc de la copii partile imaginii si le reunesc.
+			   - Scriu in fisier imaginea.
+			   - Dupa terminarea operatiilor, trimit mesaj de terminare.
+			   - Primesc statistica si o scriu in fisier.
+
+
+Daca nodul este intermediar: - Primesc numarul de operatii.
+			     - Trimit numarul de opratii.
+			     - Primesc numarul de linii.
+			     - Primesc numarul de coloane.
+			     - Primesc linia de sus.
+			     - Primesc linia de jos.
+			     - Primesc toti pixelii.
+			     - Trimit numarul de linii.
+			     - Trimit numarul de coloane.
+ 			     - Trimit linia de sus.
+			     - Trimit linia de jos.
+			     - Trimit pixelii.
+			     - Primesc pixelii si ii reunesc.
+			     - Trimit la parinte pixelii.
+			     - Dupa terminarea operatiilor, primesc mesaj de terminare de la parinte.
+			     - Trimit mesaj de terminare mai departe.
+			     - Primesc mesaje de terminare de la copii si le reunesc.
+			     - Trimit statistica la parinte.
+
+
+Daca nodul este frunza: - Primesc numarul de operatii.
+			- Primesc numarul de linii.
+			- Primesc numarul de coloane.
+			- Primesc linia de sus.
+			- Primesc linia de jos.
+			- Primesc toti pixelii.
+			- Aplic filtrul.
+			- Trimit toti pixelii.
+			- Dupa terminarea operatiilor, primesc mesaj de terminare.
+			- Completez statistica cu numarul de linii pe care am aplicat filtrul.
+			- Trimit la parinte statistica.
+	
+
+Observatie: Nu am putut rula pe cluster, intrucat compilatorul MPI pentru C++ nu este instalat.
