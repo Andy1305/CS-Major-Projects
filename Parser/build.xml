@@ -1,0 +1,17 @@
+<project>
+    <target name="clean">
+        <delete file="tema.jar"/>
+    </target>
+    <target name="compile">
+        <javac srcdir="." destdir="./src"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar destfile="tema.jar" basedir="./src">
+            <manifest>
+                <attribute name="Main-Class" value="Tema_PP_1"/>
+            </manifest>
+        </jar>
+
+    </target>
+</project>

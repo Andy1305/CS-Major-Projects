@@ -1,0 +1,31 @@
+Programming Language Parser
+
+
+AssertEvaluation: -contine metodele necesare parsarii instructiunii assert.
+
+AssignmentEvaluation: -accepta metoda care evalueaza atribuirea.
+
+Evaluator: -clasa folosita pentru implementarea Visitorului.
+	   -contine implementarea metodelor de evaluare a instructiunilor de atribuire, ifului, forului si assertului.
+
+ExprEvaluation: -contine metodele necesare parsarii si rezolvarii unei expresii.
+
+ExprResults: -contine un hashmap ce pastreaza valorile variabilelor si expresiilor.
+
+ForEvaluation: -contine metodele necesare pentru parsarea si evaluarea forului.
+
+IfEvaluation: -contine metodele necesare pentru si evaluarea ifului.
+
+Instruction: -interfata pentru Decorator design pattern.
+
+InstructionDecorator: -clasa abstracta pentru Decorator design pattern.
+
+Parser: -contine metodele cu ajutorul carora se parseaza expresia initiala, in functie de elementele pe care le contine.
+
+Tema_PP_1: -clasa ce contine metoda main(), in care se citeste stringul si se apeleaza parserul.
+
+ValueInstructionDecorator: -clasa ce contine metoda care decoreaza o alta metoda.
+
+Visitable: -interfata pentru design patternul Visitor, ce contine metoda accept().
+
+Visitor: -interfata ce contine metodele specifice fiecarei clase, implementate in clasa Evaluator.
