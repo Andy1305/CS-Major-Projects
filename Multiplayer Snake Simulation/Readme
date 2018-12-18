@@ -1,0 +1,34 @@
+Multiplayer Snake Simulation
+
+
+1. Functia get_next_pos() obtine pozitia celulei din fata serpisorului, in care ar trebui sa se mute.
+2. Functia get_tail_pos() obtine pozitia ultimei celule a serpisorului, parcurgandu-l pana o gaseste.
+3. In main():
+	- Matricea aux contine encodingul unui serpisor in a[i][j], daca acesta se poate muta in
+	  world[i][j]. Daca a[i][j] e ocupat de encodingul altui serpisor, inseamna ca se va produce coliziune.
+	- La fiecare pas, pentru fiecare serpisor, se obtine pozitia capului si a cozii.
+	- Daca celula din fata e libera si daca aux[i][j] e 0, atunci serpisorul se poate muta in
+	  world[i][j], altfel se produce coliziune.
+	- Daca celula din fata nu e libera si contine capul unui serpisor, iar cei doi se indreapta unul spre
+	  celalalt sau daca serpisorul din fata se indreapta in orice directie, dar are lungimea mai mare ca 1, 
+	  atunci se produce coliziune.
+	- Daca celula din fata nu e libera si nu contine capul unui alt serpisor, se va produce coliziune doar
+	  daca acestia sunt in "T" (capul si coada unui serpisor sunt in parti diferite ale capului celuilalt
+	  serpisor).
+	- Daca s-a detectat coliziune, se iese din functie, altfel, se modifica pozitiile serpisorilor in
+	  matrice: se reseteaza aux, se sterge coada, se muta capul si se actualizeaza pozitia lui.
+	  
+
+Observatii: Am modificat structura snake, adaugand tail (ultima celula) si next_pos (celula urmatoare),
+	    de tip (struct coord).
+	  
+
+Testare:
+- La primele doua teste, timpul este extrem de mic (aproximativ 0.00003 secunde) si nu se prea observa scalabilitatea.
+- La testul big_input (20000 de runde): - 1 thread: ~27.714 secunde
+					- 2 threaduri: ~14.820 secunde
+					- 4 threaduri: ~7.898 secunde
+					- 8 threaduri: ~7.608 secunde
+
+Specificatii: - Procesor: Intel i7-6700HQ
+       	      - Memorie RAM: 16 GB
