@@ -1,0 +1,35 @@
+In fisierul GAS.hs:
+
+ - sortLinesAndCols sorteaza dupa linie si apoi dupa coloana obiectele din nivel.
+ - findMaxCol este folosita pentru a gasi coloana maxima din nivel, pentru a le putea egala.
+ - froupInLine este folosita de groupBy pentru a grupa in linii obiectele.
+ - myshow este o functie auxiliara care afiseaza obiectele.
+ - show afiseaza un nivel, aplicand, in ordine: sortare linii si coloane, adaugare newline-uri,
+   grupare dupa linie, adaugare spatii si egalare linii si adaugara bare.
+ - addSquareToSamePos adauga un patrat la o pozitie la care exista un obiect.
+ - addSquare adauga un patrat la nivel.
+ - addCircleToSamePos adauga un cerc la o pozitie la care exista un obiect.
+ - addCircle adauga un cerc la nivel.
+ - addArrowToSamePos adauga o sageata la o pozitie la care exista un obiect.
+ - addArrow adauga o sageata la nivel.
+ - changeLineIndex schimba indexul obiectelor dintr-o linie.
+ - addNewLines adauga newlines la fiecare linie si la liniile care lipsesc.
+ - addSpacesBetweenCols dauga spatii intre coloane, folosind foldl cu functia addSpacesBetweenColsAux.
+ - changeNewLineColIndex schimba indexul coloanelor, astfel, incat sa nu fie diferente > 1 intre ele.
+ - equalizeLinesLength face liniile de dimensiuni egale, adaugand spatii inainte si dupa obiecte.
+ - aux face indexul coloanei unui obiect newline 0, in caz ca e un rand liber (e doar newline pe rand),  
+   altfel, ar fi fost -1 si s-ar fi adaugat un spatiu in plus (de la 0 la -1).
+ - addBars adauga bare intre coloane.
+ - getNextPos returneaza urmatoarea pozitie, la care trebuie sa se mute patratul.
+ - changeSquarePos modifica pozitia unui patrat.
+ - changeSquareHeading modifica orientarea unui patrat.
+ - changeSquareHeadingTemp schimba headingul unui patrat cu al altui patrat, in cazul in care un patrat muta altul.
+ - squareToCircle muta un patrat peste un cerc.
+ - squareToArrow muta un patrat peste o sageata.
+ - checkIfEqual verifica daca sunt aceleasi patrate, inainte ca headingul sa se fi schimbat.
+ - findPrevSquare gaseste unde se afla un patrat, inainte sa fie mutat si sa-i fie schimbata directia.
+ - squareToSquare muta un patrat peste un patrat. newLevel este nivelul cu patratul urmator mutat.
+ - checkNextPosElem verifica ce element se afla pe pozitia pe care trebuie sa se mute obiectul.
+ - split imparte o locatie ce contine doua obiecte, in doua obiecte diferite, folosind splitAux.
+ - move mută pătratul de la poziția precizată din nivel. Dacă la poziția respectivă 
+   nu se găsește un pătrat, întoarce direct parametrul.
