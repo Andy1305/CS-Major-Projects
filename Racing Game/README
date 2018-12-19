@@ -1,0 +1,26 @@
+Visual Studio racing game in C++ and OpenGL.
+
+For info on how to run it, please email me.
+
+
+1. Clasa RacingGame include variabilele si metodele generale, specifice programului principal.
+   Metoda getTime() actualizeaza timpul zilei.
+   Metoda Init() creeaza si initializeaza obiecte si variabile.
+   Metoda Update() aplica operatiile de tranzitie si rotire pe obiecte (strada, masina etc.), dupa care le deseneaza.
+   Metoda OnInputUpdate() controleaza camera si masina.
+   Metoda OnKeyPress controleaza modul wireframe si solid.
+   Restul metodelor sunt exact ca in framework, sau ca in laboratoare.
+2. Clasa Camera implementeaza metodele specifice camerei.
+3. Clasa Sky include variabilele si metodele pentru cer.
+4. Clasa Car include variabilele si metodele pentru masina.
+5. Clasa Highway include variabilele si metodele pentru strada, compusa din: portiuni drepte,
+   curbe la stanga si la dreapta, cu un unghi oarecare, borduri, cu un unghi oarecare si obstacole.
+   Metodele BuildLeftCurve() si BuildRightCurve() creeaza puncte pentru curbe.
+6. Clasa Earth include variabilele si metodele pentru pamant.
+7. Clasa Sky include variabilele si metodele pentru cer.
+8. In Vertex Shader se face tranzitia zi-noapte, conform timpului, prin interpolarea culorilor.
+
+Observatii:
+ - Am sters folderul libs.
+ - Am sters /Visual Studio/Framework_EGC.VC.
+ - Am sters folderul /x64.
