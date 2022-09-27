@@ -1,8 +1,7 @@
-This repository contains some of the projects I made during almost four years of college (Faculty of Automation Control and Computer Science, Specialization Computer Science and Information Technology, Polytechnic University of Bucharest).
-These materials are entirely made by me.
-You cannot use any of these materials without my permission. If you need any of them you can contact me at andreyemanuel13@yahoo.com.
+This repository contains some of the projects I made during almost 4 years of college (Faculty of Automation Control and Computer Science, Specialization Computer Science and Information Technology, Polytechnic University of Bucharest).
+These materials are entirely made by myself.
+Please feel free to contact me if you need any information or would like to use my code.
 I'm open to new projects using any programming language, especially C/C++, Java and Python.
-This repository will be updated periodically.
 
 All rights reserved.
 
